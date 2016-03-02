@@ -1,8 +1,8 @@
 <h1>Things To Do</h1>
 <hr>
 <% @tasks.each do |task| %>
-  <h2><%= task.title %></h2>
-  <%#= link_to 'Show Task', task_path(task) %>
+  <h3><%= task.title %> | <%= link_to "⛏", edit_task_path(task) %></h3>
 <% end %>
+
 
 <p><h3><%=link_to "Add Thing", new_task_path %></h3></p>
