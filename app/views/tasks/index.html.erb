@@ -1,7 +1,12 @@
 <h1>Things To Do</h1>
 <hr>
 <% @tasks.each do |task| %>
-  <h3><%= task.title %> | <%= link_to "⛏", edit_task_path(task) %></h3>
+  <h3><%= task.title %> | 
+  <%= link_to "⚒", edit_task_path(task) %>
+  
+  <%= link_to "☠", task, method: :delete %>
+  </h3>
+
 <% end %>
 
 
